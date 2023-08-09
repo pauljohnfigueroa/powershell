@@ -1,5 +1,5 @@
 # Author: Paul John Figueroa
-# Systems Administrator, Golden Rural Bank of the Philippines, Inc.
+# Systems Administrator @ GRBP.
 # Date: August 8, 2023
 # Version 1.0
 
