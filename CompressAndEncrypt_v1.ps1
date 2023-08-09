@@ -10,7 +10,7 @@
 
 <# 
 # Example: Powershell and Task Scheduler
-# .\CompressAndEncrypt_v1.ps1 -SourceDir 'C:\DATA\GRBP 2023\PROJECTS\Automation Projects\Tests\test_files\' -EncFileDestDir 'C:\DATA\iDRIVE\' -origFileNewDirPath 'C:\DATA\GRBP 2023\PROJECTS\Automation Projects\Tests\test_files\' -origFileNewDirName 'origx_files' -fileExtension 'mp3' -logFile './log_file.txt' -logFileDuplicate './log_file_duplicate.txt'
+# .\CompressAndEncrypt_v1.ps1 -SourceDir 'C:\path\to\source\files\' -EncFileDestDir 'C:\path\to\processed\files\' -origFileNewDirPath 'C:\root\path\where\to\transfer\the\processed\files\' -origFileNewDirName 'processedfiles' -fileExtension 'mp3' -logFile './log_file.txt' -logFileDuplicate './log_file_duplicate.txt'
 #>
 
 # This will do the following
