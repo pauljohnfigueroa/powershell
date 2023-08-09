@@ -10,13 +10,14 @@
 
 <# 
 # Example: Powershell and Task Scheduler
-# .\CompressAndEncrypt_v1.ps1 -SourceDir 'C:\path\to\source\files\' -EncFileDestDir 'C:\path\to\processed\files\' -origFileNewDirPath 'C:\root\path\where\to\transfer\the\processed\files\' -origFileNewDirName 'processedfiles' -fileExtension 'mp3' -logFile './log_file.txt' -logFileDuplicate './log_file_duplicate.txt'
+# .\CompressAndEncrypt_v1.ps1 -SourceDir 'C:\path\to\source\files\' -EncFileDestDir 'C:\path\to\processed\files\' -origFileNewDirPath 'C:\root\path\where\to\transfer\the\processed\files\' -origFileNewDirName 'processed_files_dir' -fileExtension 'mp3' -logFile './log_file.txt' -logFileDuplicate './log_file_duplicate.txt'
 #>
 
 # This will do the following
 # Get Hash (Sha256)
 # Generate Password
 # Encrypt with password and Key file
+
 
 # ------------------------------------------------------------------------------------------------------------
 # command line parameters
@@ -25,20 +26,22 @@ Param(
     # Default parameter values
 
     # The directory/folder where the files to be processed are located.
-    $SourceDir = "C:\DATA\GRBP 2023\PROJECTS\Automation Projects\Tests\test_files\",
+    $SourceDir = "C:\myscript\",
     # The directory where the processed files will be saved.
-    $EncFileDestDir = "C:\DATA\iDRIVE\",
+    $EncFileDestDir = "C:\myscript\dest",
     # The directory where the new directory for the processed original (unprocessed) files will be created.
-    $origFileNewDirPath = "C:\DATA\GRBP 2023\PROJECTS\Automation Projects\Tests\test_files\",
+    $origFileNewDirPath = "C:\myscript\orig",
     # The actual directory where the original (unprocessed) files will be transferred to after processing.
-    $origFileNewDirName = "orig_files",
+    $origFileNewDirName = "C:\myscript\processed_files_dir",
     # The file extension of siles that will be processed.
     $fileExtension = "mp3",
     # The log file
-    $logFile = "./encryption_log.txt",
-    $logFileDuplicate = "./encryption_log_duplicate.txt"
+    $logFile = "C:\myscript\encryption_log.txt",
+    $logFileDuplicate = "C:\myscript\encryption_log_duplicate.txt"
 
 )
+
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
 # ------------------------------------------------------------------------------------------------------------
 # Password Generator
